@@ -1,0 +1,44 @@
+.form {
+  &__group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  &__label {
+    font-weight: 500;
+    &_group {
+      .error {
+        padding-left: 0.5rem;
+      }
+    }
+  }
+  &__field {
+    padding: 0.5rem;
+  }
+  .textarea {
+    resize: none;
+    height: 100%;
+  }
+}
+
+.search {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+  .form__field {
+    text-align: center;
+    padding: 0.8rem;
+    border: none;
+    outline: none;
+  }
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    width: 1rem;
+    fill: #9e9e9e;
+  }
+}

@@ -1,0 +1,53 @@
+.btn {
+  font: inherit;
+  position: relative;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.8rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn_success {
+  background-color: #4caf50;
+  color: #ffffff;
+  .icon {
+    width: 1rem;
+    height: 0.9rem;
+    margin-right: 0.5rem;
+    fill: #ffffff;
+  }
+}
+
+.btn_remove {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    .icon {
+      fill: #b71c1c;
+    }
+  }
+  &:focus {
+    outline: none;
+  }
+  .icon {
+    width: 1rem;
+    height: 100%;
+  }
+}
+
+.btn_size_wide {
+  width: 100%;
+}
+
+.disabled {
+  background-color: #9e9e9e;
+  cursor: not-allowed;
+}
