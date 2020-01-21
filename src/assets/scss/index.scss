@@ -100,6 +100,9 @@ body {
   padding: 0;
   &__item {
     position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     margin-top: -1px;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;

@@ -3,14 +3,19 @@
     <li
       class="items-list__item"
       v-for="(item, idx) in items"
-      :key="idx"
+      :key="item.id"
       @click="selectItem(idx)"
       @keyup.enter="selectItem(idx)"
       @keyup.delete="removedItem(idx)"
       tabindex="0"
     >
       <span>{{ item.title }}</span>
-      <button class="btn btn_remove" type="button" @click.stop="removedItem(idx)" tabindex="-1">
+      <button
+        class="btn btn_remove"
+        type="button"
+        @click.stop="removedItem(idx)"
+        tabindex="-1"
+      >
         <svg class="icon">
           <use xlink:href="#delete" />
         </svg>

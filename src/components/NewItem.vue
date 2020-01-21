@@ -2,22 +2,35 @@
   <form class="app__item-add form" @submit.prevent="addItem">
     <div class="form__group">
       <div class="form__label_group">
-        <label class="form__label">Title</label>
-        <small class="error" v-if="!$v.title.required && $v.title.$dirty">Field is required</small>
+        <label class="form__label" for="title">Title</label>
+        <small class="error" v-if="!$v.title.required && $v.title.$dirty"
+          >Field is required</small
+        >
       </div>
 
-      <input class="form__field" type="text" v-model.trim="$v.title.$model" />
+      <input
+        class="form__field"
+        id="title"
+        type="text"
+        v-model.trim="$v.title.$model"
+      />
     </div>
     <div class="form__group flex-grow">
       <div class="form__label_group">
-        <label class="form__label">Description</label>
+        <label class="form__label" for="description">Description</label>
         <small
           class="error"
           v-if="!$v.description.required && $v.description.$dirty"
-        >Field is required</small>
+          >Field is required</small
+        >
       </div>
 
-      <textarea class="form__field textarea" rows="3" v-model.trim="$v.description.$model"></textarea>
+      <textarea
+        class="form__field textarea"
+        id="description"
+        rows="3"
+        v-model.trim="$v.description.$model"
+      ></textarea>
     </div>
     <button
       type="submit"
@@ -28,14 +41,15 @@
       <span v-if="loading" class="spinner"></span>
       <span v-else>
         <svg class="icon">
-          <use xlink:href="#plus" />
-        </svg>Add
+          <use xlink:href="#plus" /></svg
+        >Add
       </span>
     </button>
   </form>
 </template>
 
 <script>
+import { uuid } from "vue-uuid";
 import { required } from "vuelidate/lib/validators";
 
 export default {
