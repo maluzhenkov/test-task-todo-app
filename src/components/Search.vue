@@ -1,8 +1,8 @@
 <template>
   <div class="search">
-    <div class="icon icon__search">
+    <div class="search__icon">
       <svg class="icon">
-        <use xlink:href="../assets/sprite.svg#magnifying-glass" />
+        <use xlink:href="#magnifying-glass" />
       </svg>
     </div>
     <input class="form__field" type="search" :placeholder="placeholder" v-model="search" />

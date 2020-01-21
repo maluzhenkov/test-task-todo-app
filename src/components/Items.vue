@@ -12,7 +12,7 @@
       <span>{{ item.title }}</span>
       <button class="btn btn_remove" type="button" @click.stop="removedItem(idx)" tabindex="-1">
         <svg class="icon">
-          <use xlink:href="../assets/sprite.svg#delete" />
+          <use xlink:href="#delete" />
         </svg>
       </button>
     </li>

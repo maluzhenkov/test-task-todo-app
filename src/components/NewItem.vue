@@ -28,7 +28,7 @@
       <span v-if="loading" class="spinner"></span>
       <span v-else>
         <svg class="icon">
-          <use xlink:href="../assets/sprite.svg#plus" />
+          <use xlink:href="#plus" />
         </svg>Add
       </span>
     </button>
